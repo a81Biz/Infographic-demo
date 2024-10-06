@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Check, X, Zap } from 'lucide-react';
+import { Check, X, Zap } from 'lucide-react';
 
 const RemoveDuplicatesInfographic = () => {
   const originalArray = [1, 2, 2, 3, 4, 4, 4, 5, 5];

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ArrowRight, RotateCcw, ArrowLeftRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, RotateCcw } from 'lucide-react';
 
 const BubbleSortInfographic = () => {
   const initialArray = [64, 34, 25, 12, 22, 11, 90];

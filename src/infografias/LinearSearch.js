@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Check, X } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 
 const BusquedaLinealInfografia = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

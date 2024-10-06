@@ -31,7 +31,7 @@ function App() {
         <Route path="/Remove_Duplicates_For_Sorted_Array" element={<RemoveDuplicatesForSortedArray />} /> {}
         <Route path="/Bubble_Sort" element={<BubbleSort />} /> {}
         <Route path="/Linear_Search" element={<LinearSearch />} /> {}
-        <Route path="/SimpleSortingInSQL" element={<SimpleSortingInSQL />} /> {}
+        <Route path="/Simple_Sorting_In_SQL" element={<SimpleSortingInSQL />} /> {}
         <Route path="/Filtering_In_MongoDB" element={<FilteringInMongoDB />} /> {}
         <Route path="/Prime_Number_Check" element={<PrimeNumberCheck />} /> {}
       </Routes>
