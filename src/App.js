@@ -11,7 +11,6 @@ import StringLength from './infografias/StringLength';
 import TwoSumProblem from './infografias/TwoSumProblem';
 
 
-
 function App() {
   return (
     <Router>

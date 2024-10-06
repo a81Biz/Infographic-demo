@@ -30,7 +30,6 @@ const Infographic = () => {
   return (
     <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
       <h1 className="text-2xl font-bold mb-4">Verificación de Palíndromos: Paso a Paso</h1>
-      
       <div className="flex justify-between mb-6">
         {steps.map((step, index) => (
           <div key={index} className="flex flex-col items-center">
