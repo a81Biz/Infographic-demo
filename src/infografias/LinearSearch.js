@@ -20,7 +20,7 @@ const BusquedaLinealInfografia = () => {
       }, 1000);
       return () => clearTimeout(timer);
     }
-  }, [currentIndex, started]);
+  }, [currentIndex, started, array, found]);
 
   const handleStart = () => {
     setStarted(true);
