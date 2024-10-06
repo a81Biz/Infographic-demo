@@ -9,7 +9,11 @@ import FindMinAndMaxInArray from './infografias/FindMinAndMaxInArray';
 import ReverseAString from './infografias/ReverseAString';
 import StringLength from './infografias/StringLength';
 import TwoSumProblem from './infografias/TwoSumProblem';
-
+import RemoveDuplicatesForSortedArray from './infografias/RemoveDuplicatesForSortedArray';
+import BubbleSort from './infografias/BubbleSort';
+import LinearSearch from './infografias/LinearSearch';
+import SimpleSortingInSQL from './infografias/SimpleSortingInSQL';
+import FilteringInMongoDB from './infografias/FilteringInMongoDB';
 
 function App() {
   return (
@@ -23,6 +27,10 @@ function App() {
         <Route path="/Reverse_a_String" element={<ReverseAString />} /> {}
         <Route path="/String_Length" element={<StringLength />} /> {}
         <Route path="/Two_Sum_Problem" element={<TwoSumProblem />} /> {}
+        <Route path="/Remove_Duplicates_For_Sorted_Array" element={<RemoveDuplicatesForSortedArray />} /> {}
+        <Route path="/Bubble_Sort" element={<BubbleSort />} /> {}
+        <Route path="/Linear_Search" element={<LinearSearch />} /> {}
+        <Route path="/Filtering_In_MongoDB" element={<FilteringInMongoDB />} /> {}
       </Routes>
     </Router>
   );
