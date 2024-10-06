@@ -75,12 +75,12 @@ const Infographic = () => {
         <StepVisual step="2. Preparar">
           <div className="flex flex-col w-full">
             <div className="flex flex-wrap mb-2">
-              {exampleString1.toLowerCase().replace(/\s/g, '').split('').map((char, index) => (
+              {exampleString1.toLowerCase().replace(/s/g, '').split('').map((char, index) => (
                 <LetterSquare key={index} letter={char} className="bg-green-200 m-1" />
               ))}
             </div>
             <div className="flex flex-wrap">
-              {exampleString2.toLowerCase().replace(/\s/g, '').split('').map((char, index) => (
+              {exampleString2.toLowerCase().replace(/s/g, '').split('').map((char, index) => (
                 <LetterSquare key={index} letter={char} className="bg-yellow-200 m-1" />
               ))}
             </div>
@@ -90,7 +90,7 @@ const Infographic = () => {
         <StepVisual step="3. Contar">
           <div className="flex flex-col w-full">
             <div className="flex flex-wrap mb-2 justify-center">
-              {[...new Set(exampleString1.toLowerCase().replace(/\s/g, '').split(''))].map((char, index) => (
+              {[...new Set(exampleString1.toLowerCase().replace(/s/g, '').split(''))].map((char, index) => (
                 <CountSquare 
                   key={index} 
                   letter={char} 
@@ -100,7 +100,7 @@ const Infographic = () => {
               ))}
             </div>
             <div className="flex flex-wrap justify-center">
-              {[...new Set(exampleString2.toLowerCase().replace(/\s/g, '').split(''))].map((char, index) => (
+              {[...new Set(exampleString2.toLowerCase().replace(/s/g, '').split(''))].map((char, index) => (
                 <CountSquare 
                   key={index} 
                   letter={char} 
@@ -117,14 +117,14 @@ const Infographic = () => {
             <p className="font-bold mb-2">Comparación de conteos:</p>
             <div className="flex justify-center items-center">
               <div className="bg-green-300 p-2 rounded">
-                {JSON.stringify([...new Set(exampleString1.toLowerCase().replace(/\s/g, '').split(''))].reduce((acc, char) => {
+                {JSON.stringify([...new Set(exampleString1.toLowerCase().replace(/s/g, '').split(''))].reduce((acc, char) => {
                   acc[char] = exampleString1.toLowerCase().split(char).length - 1;
                   return acc;
                 }, {}), null, 2)}
               </div>
               <span className="mx-4 font-bold">=</span>
               <div className="bg-yellow-300 p-2 rounded">
-                {JSON.stringify([...new Set(exampleString2.toLowerCase().replace(/\s/g, '').split(''))].reduce((acc, char) => {
+                {JSON.stringify([...new Set(exampleString2.toLowerCase().replace(/s/g, '').split(''))].reduce((acc, char) => {
                   acc[char] = exampleString2.toLowerCase().split(char).length - 1;
                   return acc;
                 }, {}), null, 2)}
@@ -147,7 +147,7 @@ const Infographic = () => {
           <code>{`
 function sonAnagramas(str1, str2) {
   // Preparar las cadenas
-  const limpiarCadena = (str) => str.toLowerCase().replace(/\s/g, '');
+  const limpiarCadena = (str) => str.toLowerCase().replace(/s/g, '');
   const cadena1 = limpiarCadena(str1);
   const cadena2 = limpiarCadena(str2);
   

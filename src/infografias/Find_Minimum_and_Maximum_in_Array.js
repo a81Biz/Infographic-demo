@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const MinMaxArrayInfographic = () => {
   const array = [4, 2, 9, 7, 5, 1, 8];
