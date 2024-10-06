@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { ArrowRight, Check } from 'lucide-react';
 
 const BusquedaLinealInfografia = () => {
@@ -6,7 +6,9 @@ const BusquedaLinealInfografia = () => {
   const [found, setFound] = useState(false);
   const [started, setStarted] = useState(false);
 
-  const array = [3, 7, 2, 9, 1, 5];
+  // Memoriza el array para evitar que cambie en cada renderización
+  const array = useMemo(() => [3, 7, 2, 9, 1, 5], []);
+
   const target = 9;
 
   useEffect(() => {
