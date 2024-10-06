@@ -17,9 +17,11 @@ import FilteringInMongoDB from './infografias/FilteringInMongoDB';
 import PrimeNumberCheck from './infografias/PrimeNumberCheck';
 
 function App() {
+  const homepage = process.env.REACT_APP_HOMEPAGE || './';
+
   return (
-    <Router>
-      <Routes>
+    <Router basename={homepage}>
+      <Routes >
         <Route path="/" element={<Home />} /> {}
         <Route path="/Anagram_Check" element={<AnagramCheck />} /> {}
         <Route path="/Check_Palindrome" element={<CheckPalindrome />} /> {}
