@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Home from './components/Home'; 
 import Anagram_Check from './infografias/Anagram_Check'; 
 import Check_for_Palindrome from './infografias/Check_for_Palindrome';
 import Find_Duplicates_in_an_Array from './infografias/Find_Duplicates_in_an_Array'
@@ -14,6 +15,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Home />} /> {}
         <Route path="/Anagram_Check" element={<Anagram_Check />} /> {}
         <Route path="/Check_for_Palindrome" element={<Check_for_Palindrome />} /> {}
         <Route path="/Find_Duplicates_in_an_Array" element={<Find_Duplicates_in_an_Array />} /> {}
