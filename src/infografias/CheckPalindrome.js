@@ -58,7 +58,7 @@ const Infographic = () => {
 
         <StepVisual step="2. Preparar">
           <div className="flex flex-wrap">
-            {exampleString.toLowerCase().replace(/\s/g, '').split('').map((char, index) => (
+            {exampleString.toLowerCase().replace(/s/g, '').split('').map((char, index) => (
               <LetterSquare key={index} letter={char} className="bg-yellow-100 m-1" />
             ))}
           </div>
@@ -66,7 +66,7 @@ const Infographic = () => {
 
         <StepVisual step="3. Invertir">
           <div className="flex flex-wrap">
-            {exampleString.toLowerCase().replace(/\s/g, '').split('').reverse().map((char, index) => (
+            {exampleString.toLowerCase().replace(/s/g, '').split('').reverse().map((char, index) => (
               <LetterSquare key={index} letter={char} className="bg-red-100 m-1" />
             ))}
           </div>
@@ -75,7 +75,7 @@ const Infographic = () => {
         <StepVisual step="4. Comparar">
           <div className="flex flex-col">
             <div className="flex flex-wrap mb-2">
-              {exampleString.toLowerCase().replace(/\s/g, '').split('').map((char, index) => (
+              {exampleString.toLowerCase().replace(/s/g, '').split('').map((char, index) => (
                 <LetterSquare key={index} letter={char} className="bg-purple-100 m-1" />
               ))}
             </div>
@@ -85,7 +85,7 @@ const Infographic = () => {
               <ArrowRight className="text-gray-400 mx-2" />
             </div>
             <div className="flex flex-wrap">
-              {exampleString.toLowerCase().replace(/\s/g, '').split('').reverse().map((char, index) => (
+              {exampleString.toLowerCase().replace(/s/g, '').split('').reverse().map((char, index) => (
                 <LetterSquare key={index} letter={char} className="bg-blue-100 m-1" />
               ))}
             </div>
@@ -106,7 +106,7 @@ const Infographic = () => {
           <code>{`
 function esPalindromo(str) {
   // Preparar la cadena: convertir a minúsculas y eliminar espacios
-  const cadenaLimpia = str.toLowerCase().replace(/\s/g, '');
+  const cadenaLimpia = str.toLowerCase().replace(/s/g, '');
   
   // Invertir la cadena
   const cadenaInvertida = cadenaLimpia.split('').reverse().join('');
