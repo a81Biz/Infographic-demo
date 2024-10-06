@@ -14,6 +14,7 @@ import BubbleSort from './infografias/BubbleSort';
 import LinearSearch from './infografias/LinearSearch';
 import SimpleSortingInSQL from './infografias/SimpleSortingInSQL';
 import FilteringInMongoDB from './infografias/FilteringInMongoDB';
+import PrimeNumberCheck from './infografias/PrimeNumberCheck';
 
 function App() {
   return (
@@ -30,7 +31,9 @@ function App() {
         <Route path="/Remove_Duplicates_For_Sorted_Array" element={<RemoveDuplicatesForSortedArray />} /> {}
         <Route path="/Bubble_Sort" element={<BubbleSort />} /> {}
         <Route path="/Linear_Search" element={<LinearSearch />} /> {}
+        <Route path="/SimpleSortingInSQL" element={<SimpleSortingInSQL />} /> {}
         <Route path="/Filtering_In_MongoDB" element={<FilteringInMongoDB />} /> {}
+        <Route path="/Prime_Number_Check" element={<PrimeNumberCheck />} /> {}
       </Routes>
     </Router>
   );
