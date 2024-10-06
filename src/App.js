@@ -14,7 +14,7 @@ import Two_Sum_Problem from './infografias/Two_Sum_Problem'
 function App() {
   return (
     <Router>
-      <Routes>
+      <Routes basename = "/infographic">
         <Route path="/" element={<Home />} /> {}
         <Route path="/Anagram_Check" element={<Anagram_Check />} /> {}
         <Route path="/Check_for_Palindrome" element={<Check_for_Palindrome />} /> {}
