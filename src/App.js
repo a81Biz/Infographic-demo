@@ -15,6 +15,7 @@ import LinearSearch from './infografias/LinearSearch';
 import SimpleSortingInSQL from './infografias/SimpleSortingInSQL';
 import FilteringInMongoDB from './infografias/FilteringInMongoDB';
 import PrimeNumberCheck from './infografias/PrimeNumberCheck';
+import CICDFlowDiagram from './infografias/CICDFlowDiagram';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/Simple_Sorting_In_SQL" element={<SimpleSortingInSQL />} /> {}
         <Route path="/Filtering_In_MongoDB" element={<FilteringInMongoDB />} /> {}
         <Route path="/Prime_Number_Check" element={<PrimeNumberCheck />} /> {}
+        <Route path='/CI_CD_Flow' element={<CICDFlowDiagram/>}/>{}
       </Routes>
     </Router>
   );
