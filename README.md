@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+# 🧠 Infographic Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Infographic Demo** es una aplicación interactiva construida en React que explica paso a paso distintos algoritmos mediante visualizaciones didácticas. Está pensada para enseñar conceptos como verificación de anagramas, búsqueda lineal, burbuja, entre otros, de forma visual, clara y escalable.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tecnologías usadas
 
-### `npm start`
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS v3.4.1](https://tailwindcss.com/)
+- [Lucide Icons](https://lucide.dev/icons/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Instalación y ejecución
 
-### `npm test`
+```bash
+# Clona el repositorio
+git clone https://github.com/a81Biz/Infographic-demo.git
+cd Infographic-demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Instala las dependencias
+npm install
 
-### `npm run build`
+# Inicia el servidor de desarrollo
+npm run dev
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🔁 Intento de migración (NO EXITOSO)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Se intentó migrar a Tailwind CSS v4.0.0 para aprovechar mejoras en rendimiento y compatibilidad a futuro. Sin embargo, la migración provocó errores graves con la configuración de PostCSS al usar Vite:
 
-### `npm run eject`
+```bash
+[plugin:vite:css] [postcss] It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin.
+The PostCSS plugin has moved to a separate package...
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+También surgió un conflicto con los módulos ESM vs CommonJS al detectar sintaxis de `export default` en `postcss.config.js`, obligando a modificar `"type": "module"` en `package.json`, lo cual rompía otras herramientas.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ❌ Problemas detectados tras la migración
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- TailwindCSS v4 requiere `@tailwindcss/postcss`, lo cual **no es compatible directamente con Vite** sin configuraciones adicionales.
+- Las clases de Tailwind no se renderizaban, dejando el sitio **sin estilos visibles**.
+- Los íconos y estilos visuales desaparecieron.
+- El rendimiento de desarrollo disminuyó por overhead en el `postcss.config.js`.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ✅ Solución adoptada
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Revertimos a **Tailwind v3.4.1** y restauramos el funcionamiento original sin conflictos ni advertencias. Esto permite mantener la compatibilidad con:
 
-### Code Splitting
+- Configuración Vite estándar.
+- PostCSS clásico.
+- Sintaxis de módulos comunes.
+- Flujo visual esperado por los usuarios.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 📦 Versiones estables usadas:
 
-### Analyzing the Bundle Size
+```json
+"tailwindcss": "^3.4.1",
+"postcss": "^8.4.38",
+"autoprefixer": "^10.4.19"
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🛠 Archivos clave
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### tailwind.config.js
 
-### Advanced Configuration
+```js
+module.exports = {
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### postcss.config.js
 
-### Deployment
+```js
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🌐 Vista previa
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Puedes ver una versión en producción aquí:
+
+🔗 [https://a81.biz/Infographic-demo](https://a81.biz/Infographic-demo)
+
+---
+
+## 🧠 Contribuciones
+
+Este proyecto está pensado para ser educativo y abierto a mejoras. Si deseas aportar más visualizaciones o mejoras visuales, ¡siéntete libre de hacer un pull request!
+
+---
+
+## 🗂️ Estructura del Proyecto
+
+```
+├── public/
+├── src/
+│   ├── components/
+│   ├── infografias/
+│   ├── App.jsx
+│   ├── index.jsx
+├── tailwind.config.js
+├── postcss.config.js
+├── vite.config.js
+└── index.css
+```
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia MIT.

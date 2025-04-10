@@ -1,6 +1,5 @@
 import React from 'react';
 import { 
-  GitBranch, 
   GitPullRequest, 
   Check, 
   Rocket, 
